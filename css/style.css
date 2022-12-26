@@ -1,0 +1,144 @@
+body {
+    perspective: 700px;
+    background: #3B3B94;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* ===================================================
+                    Title
+======================================================= */
+.title h1 {
+    text-align: center;
+    margin-top: 70px;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 10px 10px 10px #232323;
+}
+
+.title .underline {
+    width: 120px;
+    height: 5px;
+    margin: 20px auto;
+    background-color: #2a2a2a;
+}
+
+/* =========================================================
+                    Cards
+=============================================================*/
+.cards {
+    width: 80%;
+    margin: 80px auto;
+    padding: 0 50px;
+    height: 350px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.cards .card2 {
+    margin: 0 130px;
+}
+
+.cards .item,
+.cards .front,
+.cards .back {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.cards .item {
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px #fff, -5px -5px 10px gray;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+
+.cards .front,
+.cards .back {
+    position: absolute;
+}
+
+.cards .front {
+    border: 2px solid #fff;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.cards .back {
+    transform: rotateY(180deg);
+}
+
+.cards .item:hover {
+    transform: rotateY(180deg);
+}
+
+/* =================================
+            Front
+===================================*/
+.cards .card1 .front,
+.cards .card2 .front,
+.cards .card3 .front {
+    background-image: url('../images/b-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.cards .card2 .front {
+    background-image: url('../images/b-2.jpg');
+}
+
+.cards .card3 .front {
+    background-image: url('../images/b-3.jpg');
+}
+
+/* ==================================
+            Back
+==================================== */
+.cards .back {
+    position: relative;
+    background-color: #2a2a2a96;
+    border: 1px solid #fff;
+}
+
+.cards .back .info {
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.cards .back .info h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.cards .back .info p {
+    color: #bcbcbc;
+    margin-bottom: 20px;
+}
+
+.cards .back .info a {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #3B3B94;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: 40px;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(204, 204, 204, 0.512);
+    transition: 1s;
+}
+
+.cards .back .info a:hover {
+    opacity: 0.5;
+}
